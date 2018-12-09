@@ -14,8 +14,14 @@
     <div class="list">
         <h1 class="header">To Do</h1>
         <ul class="items">
-            <li><span class="item">Buy Groceries</span></li>
-            <li><span class="item done">Learn PHP</span></li>
+            <li>
+                <span class="item">Buy Groceries</span>
+                <a href="#" class="done-button">Mark as done</a>
+            </li>
+            <li>
+                <span class="item done">Learn PHP</span>
+                
+            </li>
         </ul>
         <form class="item-add" action="add.php" method="post">
             <input type="text" name="name" placeholder="Type a new task here" class="input" autocomplete="off" required>
