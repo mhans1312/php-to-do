@@ -2,21 +2,20 @@
 
 require_once 'app/init.php';
 
-$itemsQuery = $db->prepare("
+$itemsQuery = $db->query("
 SELECT id, name, done
 FROM items
-WHERE user = :user
 ");
 
-$itemsQuery->execute(['user' => $_SESSION['user_id']
-]);
+// $itemsQuery->execute(['user' => $_SESSION['user_id']
+// ]);
 
 $items = $itemsQuery->rowCount() ? $itemsQuery : [];
 
-foreach($items as $item) {
-    print_r($item);
-    echo $item['name'], '<br>';
-}
+// foreach($items as $item) {
+//     print_r($item);
+//     echo $item['name'], '<br>';
+// }
 
 ?>
 
